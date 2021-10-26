@@ -1,0 +1,134 @@
+$yellow: #fedb3f;
+$gray: #666666;
+$black: #292929;
+$lightgray: #aaaaaa;
+$white: #ffffff;
+
+.reviews {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	gap: 2rem;
+	align-items: center;
+	width: 100%;
+	height: 43.75rem;
+
+	.reviews__title {
+		font-size: 48px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	.review {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		width: 58.75rem;
+		height: 21.75rem;
+		box-sizing: border-box;
+		background-color: #f8faf9;
+
+		.review__pic {
+			width: 253px;
+			height: 264px;
+			background-image: url('../img/reviews__person-one.png');
+		}
+
+		.review__info {
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			align-items: flex-start;
+			gap: 1rem;
+			width: 60%;
+			height: 16.5rem;
+
+			.review__title {
+				font-size: 27px;
+				font-weight: 700;
+				color: $black;
+			}
+
+			.review__description {
+				width: 80%;
+				margin: 0;
+				font-size: 18px;
+				font-weight: 400;
+				color: $gray;
+			}
+
+			.review__author {
+				font-size: 18px;
+				font-weight: 500;
+			}
+		}
+	}
+
+	.reviews__sliders {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 225px;
+		height: 125px;
+		margin-bottom: 100px;
+
+		.reviews__slider {
+			width: 70px;
+			height: 70px;
+			border: 6px solid #f8faf9;
+			border-radius: 50%;
+			cursor: pointer;
+
+			&:hover {
+				border-color: $yellow;
+			}
+		}
+		.reviews__slider:nth-child(1) {
+			background-image: url('../img/reviews__person-one.png');
+			background-size: contain;
+		}
+
+		.reviews__slider:nth-child(2) {
+			background-image: url('../img/reviews__person-two.png');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.reviews__slider:nth-child(3) {
+			background-image: url('../img/reviews__person-three.png');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.reviews__slider--active {
+			border-color: yellow;
+			cursor: default;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.reviews {
+		height: auto;
+		.review {
+			flex-flow: column;
+			justify-content: space-around;
+			height: 550px;
+
+			.review__pic {
+				width: 126px;
+				height: 132px;
+				background-size: cover;
+			}
+
+			.review__info {
+				align-items: center;
+				width: 90%;
+
+				* {
+					text-align: center;
+				}
+			}
+		}
+	}
+}

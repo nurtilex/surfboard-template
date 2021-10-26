@@ -1,0 +1,42 @@
+$yellow: #fedb3f;
+$gray: #666666;
+$black: #292929;
+$lightgray: #aaaaaa;
+$white: #ffffff;
+
+section.menu {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	height: 40.75rem;
+	box-sizing: border-box;
+	background: url('../img/wave.png') center center no-repeat;
+	background-size: cover;
+
+	&::before {
+		content: 'МЕНЮ';
+		position: absolute;
+		top: 6rem;
+		left: 4rem;
+		color: $white;
+		font-size: 48px;
+		font-weight: 700;
+	}
+
+	.menu__item {
+		width: 6.375rem;
+		height: 100%;
+		background-image: url('../img/menu__longboard.png');
+		background-size: cover;
+	}
+}
+
+// @media (max-width: 768px) {
+// 	.section.menu {
+// 		.menu__item {
+// 			width: 15%;
+// 			background-size: cover;
+// 		}
+// 	}
+// }

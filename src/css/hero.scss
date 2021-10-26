@@ -1,0 +1,142 @@
+$yellow: #fedb3f;
+$gray: #666666;
+$black: #292929;
+$lightgray: #aaaaaa;
+$white: #ffffff;
+
+.hero {
+	background-image: url('../img/hero-bg.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.hero__content {
+	position: relative;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-around;
+	padding: 0 10%;
+	gap: 1rem;
+	margin-top: 6rem;
+
+	.hero__title {
+		font-size: 4rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding: 0 45% 0 0;
+		margin: 0;
+	}
+
+	.hero__description {
+		font-size: 21px;
+	}
+
+	.hero__btn {
+		margin: 2rem 0 2.7rem;
+	}
+
+	.hero__features {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 5rem;
+		width: auto;
+		margin-left: 2.5rem;
+
+		.hero__feature {
+			position: relative;
+			width: 8.125rem;
+			height: 3.125rem;
+			font-weight: bold;
+			font-size: 20px;
+		}
+
+		#hero__feature--design::before,
+		#hero__feature--goods::before,
+		#hero__feature--delivery::before {
+			content: '';
+			position: absolute;
+			top: 5px;
+			left: -50px;
+		}
+
+		#hero__feature--design::before {
+			background-image: url('../img/design.png');
+			width: 35px;
+			height: 35px;
+		}
+		#hero__feature--goods::before {
+			background-image: url('../img/goods.png');
+			width: 35px;
+			height: 35px;
+		}
+		#hero__feature--delivery::before {
+			background-image: url('../img/delivery.png');
+			top: 10px;
+			width: 35px;
+			height: 24px;
+		}
+	}
+
+	.paginator {
+		position: absolute;
+		top: 30%;
+		right: 5%;
+		display: flex;
+		flex-flow: column;
+		justify-content: space-around;
+		gap: 0.33rem;
+		width: 3.125rem;
+		height: auto;
+		list-style: none;
+
+		.paginator__item {
+			position: relative;
+			width: 1rem;
+			height: 1rem;
+			background-color: transparent;
+			border: 1px solid transparent;
+			border-radius: 50%;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 4px;
+				left: 4px;
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background-color: #ffffff;
+			}
+		}
+
+		.paginator__item--active {
+			border-color: #fff;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.hero {
+		height: 100vh;
+	}
+	.hero .hero__content {
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+		margin-top: 16rem;
+		.hero__features,
+		.paginator {
+			display: none;
+		}
+		.hero__description {
+			text-align: center;
+		}
+
+		.hero__title {
+			font-size: 3rem;
+			padding: 0;
+			text-align: center;
+		}
+	}
+}

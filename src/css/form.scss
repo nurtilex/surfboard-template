@@ -1,0 +1,251 @@
+$yellow: #fedb3f;
+$gray: #666666;
+$black: #292929;
+$lightgray: #aaaaaa;
+$white: #ffffff;
+
+.form-wrapper {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	width: 100%;
+	height: 700px;
+	background: url('../img/cta.png') top center no-repeat;
+	background-size: cover;
+
+	.form__title {
+		font-size: 48px;
+		text-transform: uppercase;
+		color: #fff;
+	}
+
+	.form {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 0 40px;
+		width: 65%;
+		min-height: 31.25rem;
+		height: auto;
+		padding: 0.33rem;
+
+		input {
+			border-radius: 4px;
+			outline: none;
+			border: none;
+			padding: 1rem;
+			border: 4px solid transparent;
+
+			&:focus {
+				border: 4px solid $yellow;
+			}
+		}
+
+		.form__info--main {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-content: space-around;
+			gap: 10px;
+			width: 45%;
+			height: 275px;
+
+			input {
+				height: 58px;
+			}
+
+			.input-wrapper {
+				display: flex;
+				flex-flow: column;
+				gap: 5px;
+
+				span {
+					color: $white;
+					font-size: 18px;
+				}
+			}
+			.input-wrapper--half {
+				width: 47%;
+			}
+			.input-wrapper--full {
+				width: 100%;
+			}
+			.input-wrapper--quarter {
+				width: 21%;
+			}
+		}
+
+		.form__info--additional {
+			display: flex;
+			flex-flow: column;
+			justify-content: flex-start;
+			width: 45%;
+			height: 275px;
+			.input-wrapper--comment {
+				display: flex;
+				flex-flow: column;
+				gap: 5px;
+				width: 100%;
+				height: 152px;
+				margin-bottom: 35px;
+
+				span {
+					color: $white;
+					font-size: 18px;
+				}
+
+				input {
+					height: 152px;
+				}
+			}
+
+			.radio-wrapper {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				padding-left: 30px;
+				gap: 40px;
+				width: 100%;
+				height: 50px;
+
+				input {
+					position: absolute;
+					z-index: -5;
+					opacity: 0;
+				}
+
+				label {
+					position: relative;
+					color: $white;
+					font-size: 18px;
+
+					.custom-radio {
+						position: absolute;
+						top: 0px;
+						left: -29px;
+						width: 20px;
+						height: 20px;
+						background-color: #fff;
+						border-radius: 50%;
+						box-sizing: border-box;
+						border: 5px solid #fff;
+					}
+				}
+				input[type='radio']:checked + label > .custom-radio {
+					background-color: $yellow;
+				}
+			}
+
+			.checkbox-wrapper {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				padding-left: 30px;
+				width: 100%;
+				height: 50px;
+
+				input {
+					position: absolute;
+					z-index: -5;
+					opacity: 0;
+				}
+
+				label {
+					position: relative;
+					color: $white;
+					font-size: 18px;
+
+					.custom-checkbox {
+						position: absolute;
+						top: 0;
+						left: -29px;
+						width: 20px;
+						height: 20px;
+						background-color: #fff;
+						border-radius: 4px;
+						box-sizing: border-box;
+					}
+				}
+
+				input[type='checkbox']:checked + label > .custom-checkbox {
+					background-image: url('../img/checkbox.png');
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+			}
+		}
+
+		.form__sending {
+			width: auto;
+			margin-left: 21.875rem;
+
+			.btn-clear {
+				background: transparent;
+				font-size: 18px;
+				font-weight: 400;
+				text-transform: none;
+				color: $white;
+
+				&:hover {
+					color: #fedb3f;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.form-wrapper {
+		height: 80rem;
+		.form {
+			flex-flow: column nowrap;
+			width: 100%;
+
+			.form__info--main {
+				width: 80%;
+			}
+
+			.form__info--additional {
+				width: 80%;
+			}
+			.form__sending {
+				margin: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.form-wrapper {
+		height: 105rem;
+		.form {
+			flex-flow: column nowrap;
+			width: 100%;
+
+			.form__info--main {
+				width: 80%;
+
+				.input-wrapper--quarter {
+					width: 22%;
+				}
+			}
+
+			.form__info--additional {
+				width: 80%;
+				.radio-wrapper {
+					justify-content: center;
+				}
+				.checkbox-wrapper {
+					justify-content: center;
+				}
+			}
+
+			.form__sending {
+				margin: 0;
+			}
+		}
+	}
+}
