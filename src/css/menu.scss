@@ -27,7 +27,7 @@ section.menu {
 	.menu__item {
 		width: 6.375rem;
 		height: 100%;
-		background-image: url('../img/menu__longboard.png');
+		background: url('../img/menu__longboard.png') 60%;
 		background-size: cover;
 		&:hover {
 			cursor: pointer;
@@ -42,7 +42,7 @@ section.menu {
 		gap: 3rem;
 		padding-top: 2rem;
 		padding: 3rem;
-		width: 33rem;
+		width: 25rem;
 		height: 100%;
 		text-align: center;
 		background-color: #333537e5;

@@ -15,6 +15,7 @@ $white: #ffffff;
 	margin-bottom: 50px;
 
 	.how__title {
+		text-align: center;
 		font-size: 48px;
 		text-transform: uppercase;
 	}
@@ -30,9 +31,11 @@ $white: #ffffff;
 		.player__wrapper {
 			width: 100%;
 			height: 100%;
-			// .player__elem {
-			// 	display: none;
-			// }
+			.player__elem {
+				width: 100%;
+				height: 100%;
+				border: 1px solid #000;
+			}
 			.player__splash {
 				display: none;
 				position: relative;
@@ -43,18 +46,6 @@ $white: #ffffff;
 
 				&:hover {
 					cursor: pointer;
-				}
-				&::after {
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-					content: '';
-					width: 7.7rem;
-					height: 10rem;
-					background: url('../img/player__start-active.svg') center no-repeat;
-					background-size: cover;
-					z-index: 5;
 				}
 			}
 		}
