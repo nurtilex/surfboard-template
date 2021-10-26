@@ -3,6 +3,7 @@
 	const display = document.querySelector('.maincontent')
 	const footer = document.querySelector('footer')
 	let inScroll = false
+	
 
 	sections[0].classList.add('activeSection')
 
