@@ -492,8 +492,29 @@
 
 			<section class="menu">
 				<div class="menu__item"></div>
+				<div class="menu__full menu__full-hidden">
+					<button class="close-menu-full">x</button>
+					Устойчивая доска для новичков. На них легко лежать, сидеть, грести,
+					разгребаться на волны и ехать. Размер и плавучесть доски позволяет
+					брать очень маленькие и пологие волны и не спеша, не прилагая особых
+					усилий ехать по ним.
+				</div>
 				<div class="menu__item"></div>
+				<div class="menu__full menu__full-hidden">
+					<button class="close-menu-full">x</button>
+					Устойчивая доска для новичков. На них легко лежать, сидеть, грести,
+					разгребаться на волны и ехать. Размер и плавучесть доски позволяет
+					брать очень маленькие и пологие волны и не спеша, не прилагая особых
+					усилий ехать по ним.
+				</div>
 				<div class="menu__item"></div>
+				<div class="menu__full menu__full-hidden">
+					<button class="close-menu-full">x</button>
+					Устойчивая доска для новичков. На них легко лежать, сидеть, грести,
+					разгребаться на волны и ехать. Размер и плавучесть доски позволяет
+					брать очень маленькие и пологие волны и не спеша, не прилагая особых
+					усилий ехать по ним.
+				</div>
 			</section>
 
 			<section class="reviews">
@@ -520,8 +541,21 @@
 
 			<section class="how">
 				<h2 class="how__title">как мы работаем</h2>
-				<div class="how__video">
-					<div class="video__control"></div>
+				<div class="player active">
+					<div class="player__wrapper">
+						<div id="yt-player" class="player__elem"></div>
+						<div class="player__splash"></div>
+					</div>
+					<div class="player__controls">
+						<button class="player__start paused"></button>
+						<div class="player__playback">
+							<button class="player__playback-button"></button>
+						</div>
+						<div class="player__duration">
+							<span class="player__duration-completed">0:00</span> :
+							<span class="player__duration-estimate">0:00</span>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -594,7 +628,7 @@
 			</section>
 
 			<section class="map">
-				<img src="./img/map.png" alt="" class="map__pic" />
+				<div id="map"></div>
 			</section>
 
 			<footer class="footer">
@@ -664,7 +698,11 @@
 				><button class="request__close btn">Закрыть</button>
 			</div>
 		</div>
-
+		<script
+			src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
+			type="text/javascript"
+		></script>
+		<script src="https://www.youtube.com/iframe_api"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

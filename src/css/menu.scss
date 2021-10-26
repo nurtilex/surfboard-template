@@ -29,6 +29,52 @@ section.menu {
 		height: 100%;
 		background-image: url('../img/menu__longboard.png');
 		background-size: cover;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.menu__full {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 3rem;
+		padding-top: 2rem;
+		padding: 3rem;
+		width: 33rem;
+		height: 100%;
+		text-align: center;
+		background-color: #333537e5;
+		color: #fff;
+		font-size: 1.2rem;
+		transition: 1s;
+
+		overflow: hidden;
+
+		.close-menu-full {
+			position: absolute;
+			top: 0.5rem;
+			right: 0.5rem;
+			font-size: 3rem;
+
+			color: #666666;
+			background-color: transparent;
+			border: transparent;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+
+	.menu__full-hidden {
+		padding: 0;
+		width: 0;
+	}
+
+	.color-transparent {
+		color: transparent;
 	}
 }
 

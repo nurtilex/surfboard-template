@@ -11,7 +11,7 @@ $white: #ffffff;
 	gap: 2rem;
 	align-items: center;
 	width: 100%;
-	height: 500px;
+	height: 100vh;
 	margin-bottom: 50px;
 
 	.how__title {
@@ -19,21 +19,125 @@ $white: #ffffff;
 		text-transform: uppercase;
 	}
 
-	.how__video {
+	.player {
 		position: relative;
 		display: flex;
 		flex-flow: column;
 		justify-content: flex-end;
 		width: 41.375rem;
-		height: 24.4rem;
-		background-image: url('../img/how__video-bg.png');
-		background-size: cover;
+		height: 25.4rem;
 
-		.video__control {
+		.player__wrapper {
 			width: 100%;
-			height: 2.2rem;
-			background-image: url('../img/video-player-bg.png');
-			background-size: cover;
+			height: 100%;
+			// .player__elem {
+			// 	display: none;
+			// }
+			.player__splash {
+				display: none;
+				position: relative;
+				width: 100%;
+				height: 100%;
+				background-image: url('../img/how__video-bg.png');
+				background-size: cover;
+
+				&:hover {
+					cursor: pointer;
+				}
+				&::after {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					content: '';
+					width: 7.7rem;
+					height: 10rem;
+					background: url('../img/player__start-active.svg') center no-repeat;
+					background-size: cover;
+					z-index: 5;
+				}
+			}
+		}
+
+		.player__controls {
+			position: absolute;
+			bottom: 0;
+			display: flex;
+			justify-content: space-between;
+			padding: 0 1rem;
+			align-items: center;
+			width: 100%;
+			height: 3rem;
+			background-color: #404040;
+
+			.player__start {
+				position: relative;
+				width: 2rem;
+				height: 2rem;
+				border: transparent;
+				background-color: transparent;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+
+			.player__start.active {
+				background: url('../img/player__start-active.svg') center no-repeat;
+				background-size: 50%;
+				fill: #666666;
+			}
+			.player__start.paused {
+				&::after {
+					content: '';
+					position: absolute;
+					top: 7.5px;
+					left: 8.5px;
+					width: 5px;
+					height: 15px;
+					border-radius: 5px;
+					background-color: #666;
+				}
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 7.5px;
+					left: 17px;
+					width: 5px;
+					height: 15px;
+					background-color: #666666;
+					border-radius: 5px;
+				}
+			}
+
+			.player__playback {
+				position: relative;
+				width: 75%;
+				height: 0.3rem;
+				background-color: #666666;
+				border-radius: 5px;
+
+				&:hover {
+					cursor: pointer;
+				}
+
+				.player__playback-button {
+					position: absolute;
+					top: -2px;
+					left: 0;
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					background-color: #666666;
+					border: transparent;
+					outline: none;
+				}
+			}
+
+			.player__duration {
+				color: #fff;
+			}
 		}
 	}
 }
