@@ -10,7 +10,7 @@
 	const performTransition = sectionNumber => {
 		if (inScroll === false) {
 			inScroll = true
-			const position = sectionNumber * -100
+			const position = sectionNumber * -102
 
 			display.style.transform = `translateY(${position}%)`
 
